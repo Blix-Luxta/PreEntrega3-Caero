@@ -1,3 +1,5 @@
+@import "media-queries";
+
 *{
     margin: 0;
     padding: 0;
@@ -25,16 +27,6 @@ header{
         }
     }
 }
-nav {
-    a {
-        font-weight: 600;
-        padding: 1rem;
-        font-size: large;
-        &:hover {
-            color: white;
-        }
-    }
-}
 #subtitulo{
     text-align: center;
 }
@@ -42,29 +34,61 @@ nav {
 .menu-de-imagenes {
     div {
         overflow: cover;
-        img {
-            max-height: 300px;
-            max-width: 300px;
-            height: 30em;
-            width: 30em;
-            margin: 1em;
-            &:hover{
-                transform: scale(1.1);
-                box-shadow: 2px 2px 2px 2px rgba(3, 3, 3, 0);
-                transition: transform .8s;
-        a{
-            &:hover{
-                color: rgb(201, 98, 60);
+        margin: 0;
+        .menu-img{
+            img {
+                max-height: 300px;
+                max-width: 300px;
+                height: 30em;
+                width: 30em;
+                margin: 1em;
+                &:hover{
+                    transform: scale(1.1);
+                    box-shadow: 2px 2px 2px 2px rgba(3, 3, 3, 0);
+                    transition: transform .8s;
+                }
+            }
+            a{
+                &:hover{
+                    color: rgb(201, 98, 60);
+                }
+            }
+            @include mobile{
+                .menu-img{
+                    transform: scale(1.3);
+                    &:hover{
+                        transform: scale(1.1);
+                        transition: transform .8s;
+                    }
+                }
+            }
+            @include tablet{
+                img{
+                    scale: 1.1;
+                    &:hover{
+                        transform: scale(1.1);
+                        transition: transform .8s;
+                    }
+                }
+            }
+            @include desktop{
+                img {
+                    scale: 0.7;
+                    margin: 0;
+                    padding: 0;
+                    &:hover{
+                        transform: scale(1.1);
+                        transition: transform .8s;
+                    }
+                }
+            }
         }
     }
 }
-        }
-    }
-}
+
 
 li {
     list-style: none;
-
 }
 
 #submenu {
@@ -73,55 +97,74 @@ li {
         text-align: left;
         padding: .3em 0;
         font-size: large;
+    }
     span {
         li{
             border-bottom: 1px solid #030303;
             padding-bottom: .5em;
-            }
         }
     }
 }
 
-#submenu-item:hover{
-    color: rgb(84, 216, 172);
-    text-shadow: 1px 1px 1px rgb(18, 100, 76);
+#submenu-item{
+    &:hover{
+        color: rgb(84, 216, 172);
+        text-shadow: 1px 1px 1px rgb(18, 100, 76);
+    }
+    
 }
 
 
 #galeria {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 0.5em;
+    @include mobile{
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        gap: .5em;
+        margin: auto; 
+    }
+    @include tablet{
+        grid-template-columns: repeat(3, 1fr);
+        width: 90%;
+        margin: auto;
+        font-size: medium;
+    }
+    @include desktop{
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 0.5em;
+    }
 }
 .contenedor-de-imagenes {
-    /*max-width: 500px;
-    max-height: 600px;*/
-}
-.contenedor-de-imagenes {
-    img {
-        min-height: 100%;
-        width: 100%;
-        object-fit: cover;
-        align-items: center;
-        border-radius: 30px;
-        box-shadow: 1px 2px 8px  rgba(0, 0, 0, .3);
-            &:hover {
-            transform: scale(1.1);
-            transition: transform .8s;
-        }
+        img {
+            min-height: 100%;
+            width: 100%;
+            object-fit: cover;
+            align-items: center;
+            border-radius: 30px;
+            box-shadow: 1px 2px 8px  rgba(0, 0, 0, .3);
+                &:hover {
+                transform: scale(1.1);
+                transition: transform .8s;
+            }
     }
 }
 
 
 footer{
-    display: grid;
-    grid-template-columns: 1fr 14rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     background-color:lightsalmon;
-    width: 100%;
+    width: 100vw;
     margin-top: 1rem;
 
 }
 .redes-sociales {
+    div {
+        display: flex;
+        flex-wrap: wrap;
+       
+    }
     img{
         height: 45px;
         padding: 10px 5px 0 0;
@@ -129,8 +172,7 @@ footer{
     }
 }
 
-/*===================================================*/
-/*===================================================*/
+
 #instagram-icon {
     max-height: 40px;
 }
@@ -140,16 +182,18 @@ footer{
     flex-direction: row;
     align-items: center;
     padding-left: 40px;
-}
-.copyright p{
-    font-size: 20px;
+    @include mobile {
+        padding: 0;
+    }
+        p{
+            font-size: 20px;
+        }
+        img {
+            height: 25px;
+            padding-right: 10px;
+        }
 }
 
-.copyright img{
-    height: 25px;
-    padding-right: 10px;
-
-}
 .grilla-contacto { 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -159,41 +203,36 @@ footer{
 .contactanos{
     width: 30em;
     margin-left: 10%;
-}
-
-.contactanos div {
-    padding: 5em 5em;
+        div{
+            padding: 5em 5em;
+        }
 }
 
 .formulario {
     margin-top: 5em;
     margin-right: 10%;
-}
-.formulario input{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 30em;
-}
-
-.formulario .casilla {
-    margin: 1em 0 20px ;
-}
-
-.formulario textarea{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.formulario button[type=submit]{
-    padding:10px 20px; 
-    background:#ccc; 
-    border:0 none;
-    cursor:pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 5px; 
-    margin-bottom: 10em;
+    input{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 30em;
+    }
+    .casilla {
+        margin: 1em 0 20px ;
+    }
+    textarea{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    button[type=submit]{
+        padding:10px 20px; 
+        background:#ccc; 
+        border:0 none;
+        cursor:pointer;
+        border-radius: 5px; 
+        margin-bottom: 10em;
+    }
 }
 
 .banner{
@@ -219,128 +258,8 @@ footer{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-.productos-tienda img{
-    height: 20em;
-    padding: 10px 10px;
-}
-/*=====================tamaño mobil chiquito=====================*/
-@media (max-width:576px){
-    #galeria {
-    grid-template-columns: repeat(2, 1fr);
-    width: 90%;
-    margin: auto;
-}
-.nombre-empresa {
-    font-size: medium;
-    padding-top: 0.3em;
-    font-weight: 600;
-}
-.logo img{
-    height: 1.7rem;
-}
-nav a {
-    font-size: 0.8em;
-    padding: 0 0.5em 0.2em 0;
-}
-.contactanos {
-    width: 20em;
-    font-size: medium;
-    margin: 0;
-    padding: 0;
-}
-.contactanos div {
-    padding: 0;
-    margin: 3em 0 0 3em;
-
-}
-.formulario {
-    margin: 0;
-}
-.formulario input{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 15em;
-}
-}
-/*=====================tamaño mobil=====================*/
-@media (min-width:576px){
-    #galeria {
-    grid-template-columns: repeat(2, 1fr);
-    width: 90%;
-    margin: auto;
-}
-.nombre-empresa {
-    font-size: medium;
-    padding-top: 0.3em;
-    font-weight: 600;
-}
-.logo img{
-    height: 2rem;
-}
-.formulario input{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 15em;
-}
-}
-/*=====================tamaño tablet=====================*/
-@media (min-width:768px){
-    #galeria {
-    grid-template-columns: repeat(4, 1fr);
-    width: 90%;
-    margin: auto;
-    font-size: medium;
-}
-.logo img{
-    height: 2.5rem;
-    padding-right: 1em;
-}
-.nombre-empresa {
-    font-size:large;
-    padding-top: 0.5em;
-    font-weight: 600;
-}
-.contactanos {
-    width: 20em;
-    font-size: medium;
-    margin: 0;
-    padding: 0;
-}
-.contactanos div {
-    padding: 0;
-    margin: 3em 0 0 3em;
-
-}
-.formulario {
-    margin: 0;
-}
-}
-/*=====================tamaño pc=====================*/
-@media (min-width:1200px){
-    #galeria {
-    grid-template-columns: repeat(5, 1fr);
-    width: 90%;
-    margin: auto;
-}
-.nombre-empresa {
-    font-size:larger;
-    padding: 0.3em .5em 0;
-    font-weight: 600;
-}
-.contactanos{
-    width: 30em;
-    margin-left: 10%;
-}
-
-.contactanos div {
-    padding: 5em 5em;
-}
-
-.formulario {
-    margin-top: 5em;
-    margin-right: 10%;
-}
+    img{
+        height: 20em;
+        padding: 10px 10px;
+    }
 }
