@@ -1,0 +1,26 @@
+
+li {
+    list-style: none;
+}
+
+#submenu {
+    li{
+        color: black;
+        text-align: left;
+        padding: .3em 0;
+        font-size: large;
+    }
+    span {
+        li{
+            border-bottom: 1px solid #030303;
+            padding-bottom: .5em;
+        }
+    }
+    #submenu-item{
+        &:hover{
+            color: rgb(84, 216, 172);
+            text-shadow: 1px 1px 1px rgb(18, 100, 76);
+        }
+        
+    }
+}

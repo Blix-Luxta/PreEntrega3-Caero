@@ -1,0 +1,39 @@
+footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color:lightsalmon;
+    width: 100vw;
+    margin-top: 1rem;
+    .copyright{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 40px;
+        @include mobile {
+            padding: 0;
+        }
+            p{
+                font-size: 20px;
+            }
+            img {
+                height: 25px;
+                padding-right: 10px;
+            }
+    }
+    .redes-sociales {
+        div {
+            display: flex;
+            flex-wrap: wrap;
+           
+        }
+        img{
+            height: 45px;
+            padding: 10px 5px 0 0;
+            align-items: center;
+        }
+        #instagram-icon {
+            max-height: 40px;
+        }        
+    }
+}

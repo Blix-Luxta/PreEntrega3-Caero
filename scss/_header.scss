@@ -1,0 +1,21 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+header{
+    background-color: coral;
+        .logo {
+            img{
+                height: 3rem;
+                padding-right: 1em;
+            }
+        }
+        li{
+            a{
+                font-weight: bold !important;
+                &:hover{
+                    color: #f5f0f0 !important;
+                }
+            }
+    }
+}
