@@ -1,3 +1,5 @@
+@import "colors";
+
 *{
     margin: 0;
     padding: 0;
@@ -6,5 +8,5 @@
 
 body{ 
     font-family: 'Montserrat', sans-serif;
-    background-color: rgb(245, 245, 245);
+    background-color: $background-color;
 }

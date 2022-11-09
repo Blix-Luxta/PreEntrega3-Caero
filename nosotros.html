@@ -11,17 +11,40 @@
     <title>Bordearte</title>
 </head>
 <body>
-    <header class="d-flex justify-content-between align-items-center">
-        <a href="./index.html" class=" d-flex align-items-center logo">
-            <img src="./imagenes/Logo/logo.ico" alt="logo">
-            <h1 class="nombre-empresa">Bordearte</h1>
-        </a>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="productos.html">Productos</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="contacto.html">Contactos</a>
-            <a href="tienda.html">Tienda</a>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-coral">
+            <div class="container-fluid">
+                <a class="navbar-brand logo d-flex align-items-center" href="./index.html">
+                    <img src="./imagenes/Logo/logo.ico" alt="logo">
+                    <h1 class="nombre-empresa">Bordearte</h1>
+                </a>
+              <!--hasta aca-->
+              <!--boton colapsable-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--boton colapsable-->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./nosotros.html" tabindex="-1" aria-disabled="true">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html" tabindex="-1" aria-disabled="true">Contactos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./tienda.html" tabindex="-1" aria-disabled="true">Tienda</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscars">
+                        <button class="btn btn-outline-dark" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
         </nav>
     </header>
     <main>

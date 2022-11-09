@@ -1,4 +1,5 @@
 @import "media-queries";
+@import "colors";
 
 .menu-de-imagenes {
     div {
@@ -40,7 +41,7 @@
             }
             a{
                 &:hover{
-                    color: rgb(201, 98, 60);
+                    color: $hover-menu;
                 }
                 @include desktop{
                     h4{
@@ -108,12 +109,32 @@
 }
 
 .productos-tienda {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    img{
-        height: 20em;
-        padding: 10px 10px;
+    display: grid;
+    @include mobile{
+        grid-template-columns: repeat(2,1fr);
+        gap: 1.5em;
+        margin: auto; 
     }
+    @include mediaquery(575px){
+        grid-template-columns: 1fr;
+        width: 80%;
+        margin: auto; 
+        gap:2em;
+    }
+    @include tablet{
+        grid-template-columns: repeat(3,1fr);
+        gap: 1em;
+    }
+    @include desktop{
+        grid-template-columns: repeat(5,1fr);
+        gap: 1em;
+    }
+
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        align-items: center;
+    }
+
 }

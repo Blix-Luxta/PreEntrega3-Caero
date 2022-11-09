@@ -1,9 +1,11 @@
+@import "colors";
+
 a {
     text-decoration: none;
     color: black;
 }
 header{
-    background-color: coral;
+    background-color: $nav-color;
         .logo {
             img{
                 height: 3rem;
@@ -14,7 +16,7 @@ header{
             a{
                 font-weight: bold !important;
                 &:hover{
-                    color: #f5f0f0 !important;
+                    color: $nav-hover !important;
                 }
             }
     }

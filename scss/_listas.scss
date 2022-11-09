@@ -1,3 +1,4 @@
+@import "colors";
 
 li {
     list-style: none;
@@ -18,7 +19,7 @@ li {
     }
     #submenu-item{
         &:hover{
-            color: rgb(84, 216, 172);
+            color: $hover-submenu;
             text-shadow: 1px 1px 1px rgb(18, 100, 76);
         }
         
