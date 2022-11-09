@@ -124,10 +124,12 @@
     @include tablet{
         grid-template-columns: repeat(3,1fr);
         gap: 1em;
+        margin-bottom: 2em;
     }
     @include desktop{
         grid-template-columns: repeat(5,1fr);
         gap: 1em;
+        margin-bottom: 2em;
     }
 
     img{

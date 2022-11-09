@@ -1,0 +1,128 @@
+@import "media-queries";
+
+.grilla-contacto { 
+    display: grid;
+    @include mediaquery(575px){
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
+    @include mobile{
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
+    @include tablet{
+        grid-template-columns: 40% 1fr;
+        gap: 2em;
+    }
+    @include desktop{
+        grid-template-columns: 40em 1fr;
+        gap: 2em;
+    }
+    .contactanos{
+        max-width: 40em;
+        width: 90%;
+        margin-left: 10%;
+        margin-right: 2em;
+        @include mediaquery(575px){
+            max-width: 80%;
+        }
+        @include mobile{
+            margin-left: 2em;
+        }
+        @include tablet{
+            margin-left: 5%;
+            max-width: 40em;
+            width: 90%;
+        }
+        div{
+            width: 100%;
+            padding: 5em 5em;
+            
+            @include mediaquery(575px){
+                margin: auto;
+                padding: 2em 0em 1em;
+            }
+            @include mobile{
+                margin: auto;
+                padding: 2em 3em 1em;
+            }
+            @include tablet{
+                padding: 5em 0 0 0;
+            }
+            @include desktop{
+                padding: 5em 5em;
+            }
+        }
+        .contacto-tiendas{
+            padding-top: -5em;
+        }
+    }
+    
+    .formulario {
+        margin:5em 10% 0 2em;
+        max-width: 40em;
+        width: 90%;
+        @include mediaquery(575px){
+            margin: auto;
+            width: 90%;
+            max-width: 25em;
+        }
+        @include mobile{
+            max-width: 25em;
+            width: 90%;
+            margin: auto;
+        }
+        @include tablet{
+            margin:5em 10% 0 2em;
+            max-width: 30em;
+            width: 80%;
+        }
+        @include desktop {
+            margin:5em 10% 0 2em;
+            max-width: 35em;
+            width: 80%;
+        }
+        input{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                width: 100%;
+        }
+        .casilla {
+            margin: 1em 0 20px ;
+        }
+        textarea{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            @include mediaquery(575px){
+                width: 100%;
+                max-height: 6em;
+                min-height: 4em;
+            }
+            @include mobile{
+                width: 100%;
+                max-height: 6em;
+                min-height: 4em;
+            }
+            @include tablet{
+                width: 100%;
+                max-height: 8em;
+                min-height: 6em;
+            }
+            @include desktop{
+                width: 100%;
+                max-height: 12em;
+                min-height: 8em;
+            }
+        }
+        button[type=submit]{
+            padding:10px 20px; 
+            background:#ccc; 
+            border:0 none;
+            cursor:pointer;
+            border-radius: 5px; 
+            margin-bottom: 10em;
+        }
+    }
+}

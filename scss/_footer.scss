@@ -6,11 +6,11 @@ footer{
     flex-wrap: wrap;
     background-color:$footer-color;
     width: 100vw;
-    margin-top: 1rem;
+    padding: 1rem 1rem;
     .copyright{
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-content: center;
         padding-left: 40px;
         @include mobile {
             padding: 0;
@@ -26,13 +26,11 @@ footer{
     .redes-sociales {
         div {
             display: flex;
-            flex-wrap: wrap;
-           
+            flex-wrap: wrap
         }
         img{
             height: 45px;
             padding: 10px 5px 0 0;
-            align-items: center;
         }
         #instagram-icon {
             max-height: 40px;

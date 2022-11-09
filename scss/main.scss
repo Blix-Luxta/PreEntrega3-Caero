@@ -3,123 +3,12 @@
 @import "body";
 @import "header";
 @import "listas";
+@import "contacto";
 @import "cards";
 @import "colors";
 
 #subtitulo{
     text-align: center;
-}
-
-.grilla-contacto { 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2em;
-    @include mediaquery(575px){
-        grid-template-columns: 1fr;
-        gap: 2em;
-    }
-    @include mobile{
-        grid-template-columns: 1fr;
-        gap: 2em;
-    }
-    @include tablet{
-        grid-template-columns: 30% 1fr;
-        gap: 2em;
-    }
-    .contactanos{
-        width: 30em;
-        margin-left: 10%;
-        @include mediaquery(575px){
-            max-width: 80%;
-        }
-        @include mobile{
-            margin-left: 2em;
-        }
-        @include tablet{
-            margin-left: 5%;
-        }
-        div{
-            padding: 5em 5em;
-            @include mediaquery(575px){
-                padding: 0;
-            }
-            @include mobile{
-                padding: 4em 0 0 0;
-            }
-            @include tablet{
-                padding: 5em 0 0 0;
-                width: 40%;
-            }
-            h2, p {
-                @include tablet{
-                    font-size: medium;
-
-                }
-                @include mobile{
-                    font-size: medium;
-                }
-            }
-        }
-    }
-    
-    .formulario {
-        margin:5em 10% 0 2em;
-        @include mediaquery(575px){
-            max-width: 18em;
-        }
-        @include tablet{
-            max-width: 80%;
-        }
-        @include mobile{
-            max-width: 80%;
-        }
-        input{
-                display: flex;
-                flex-direction: column;
-                flex-wrap: wrap;
-                width: 30em;
-        }
-        .casilla {
-            margin: 1em 0 20px ;
-        }
-        textarea{
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            @include mediaquery(575px){
-                max-width: 25em;
-                min-width: 20em;
-                max-height: 6em;
-                min-height: 4em;
-            }
-            @include mobile{
-                max-width: 30em;
-                min-width: 25em;
-                max-height: 6em;
-                min-height: 4em;
-            }
-            @include tablet{
-                max-width: 35em;
-                min-width: 30em;
-                max-height: 8em;
-                min-height: 6em;
-            }
-            @include desktop{
-                max-width: 45em;
-                min-width: 30em;
-                max-height: 12em;
-                min-height: 8em;
-            }
-        }
-        button[type=submit]{
-            padding:10px 20px; 
-            background:#ccc; 
-            border:0 none;
-            cursor:pointer;
-            border-radius: 5px; 
-            margin-bottom: 10em;
-        }
-    }
 }
 
 .banner{
@@ -134,8 +23,11 @@
     @include mediaquery(575px){
         width:100%;
         height: 15rem;
+        object-fit: cover;
+        object-position: left;
     }
 }
+
 
 /*tienda*/
 .barra-de-busqueda {
@@ -147,8 +39,35 @@
     font-size: 17px;
 }
 
-.nosotros-lorem {
-    width: 65%;
-    margin: auto;
-    display: block;
+.nosotros{
+    display: grid;
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+    @include tablet {
+        grid-template-columns: 20em 1fr;
+    }
+    @include desktop {
+        grid-template-columns: 20em 1fr;
+    }
+    .nosotros-texto {
+        width: 100%;
+        margin: auto;
+        padding: 1em;
+        p{
+            text-indent: 3em;
+        }
+    }
+    .banner-de-ropa {
+        width: 100%;
+        height: 100%;
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%
+        };
+
+    }
+
 }
+
