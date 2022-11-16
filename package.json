@@ -7,7 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/main.scss css/style.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
-  
   },
   "keywords": [
     "developer"
@@ -16,6 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "node-sass": "^7.0.3",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "normalize.css": "^8.0.1"
   }
 }

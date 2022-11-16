@@ -1,73 +1,9 @@
-@import "media-queries";
 @import "footer";
 @import "body";
 @import "header";
 @import "listas";
 @import "contacto";
+@import "texto";
 @import "cards";
 @import "colors";
-
-#subtitulo{
-    text-align: center;
-}
-
-.banner{
-    object-fit: fill;
-    margin-bottom: 1em;
-    width:100%;
-    height: 28rem;
-    @include mobile{
-        width:100%;
-        height: 20rem;
-    }
-    @include mediaquery(575px){
-        width:100%;
-        height: 15rem;
-        object-fit: cover;
-        object-position: left;
-    }
-}
-
-
-/*tienda*/
-.barra-de-busqueda {
-    padding: 16px;
-    border: none;
-    margin-top: 8px;
-    margin-bottom: 20px;
-    margin-right: 16px;
-    font-size: 17px;
-}
-
-.nosotros{
-    display: grid;
-    @include mobile {
-        grid-template-columns: 1fr;
-    }
-    @include tablet {
-        grid-template-columns: 20em 1fr;
-    }
-    @include desktop {
-        grid-template-columns: 20em 1fr;
-    }
-    .nosotros-texto {
-        width: 100%;
-        margin: auto;
-        padding: 1em;
-        p{
-            text-indent: 3em;
-        }
-    }
-    .banner-de-ropa {
-        width: 100%;
-        height: 100%;
-        img{
-            object-fit: cover;
-            width: 100%;
-            height: 100%
-        };
-
-    }
-
-}
-
+@import "media-queries";

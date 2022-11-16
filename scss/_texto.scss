@@ -1,0 +1,81 @@
+@import "media-queries";
+#subtitulo{
+    text-align: center;
+}
+/*tienda*/
+.barra-de-busqueda {
+    padding: 16px;
+    border: none;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    margin-right: 16px;
+    font-size: 17px;
+
+    @include mediaquery(576px) {
+        width: 80% !important;
+    }
+    @include mediaquery(991px) {
+        width: 50%;
+    }
+    @include desktop {
+        width: 45%;
+    }
+}
+
+.nosotros{
+    display: grid;
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+    @include tablet {
+        grid-template-columns: 20em 1fr;
+    }
+    @include desktop {
+        grid-template-columns: 20em 1fr;
+    }
+    .nosotros-texto {
+        @include desktop {
+            width: 100%;
+            margin: auto;
+            padding: 1em 4em;
+        }
+        @include mobile {
+            width: 100%;
+            margin: auto;
+            padding: 2em;
+        }
+        @include mediaquery(575px) {
+            width: 100%;
+            margin: auto;
+            padding: 2em;
+        }
+        p{
+            @include mobile {
+                grid-template-columns: 1fr;
+                text-indent: 1em;
+                font-size: 1em;
+            }
+            @include tablet {
+                grid-template-columns: 20em 1fr;
+                text-indent: 2em;
+                font-size: 1.2em;
+            }
+            @include desktop {
+                grid-template-columns: 20em 1fr;
+                text-indent: 3em;
+                font-size: 1.2em;
+            }
+        }
+    }
+    .banner-de-ropa {
+        width: 100%;
+        height: 100%;
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%
+        };
+
+    }
+
+}
